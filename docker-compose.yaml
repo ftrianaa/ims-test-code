@@ -3,9 +3,8 @@ services:
     image: mysql:8.0
     container_name: ims
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root123
-      MYSQL_DATABASE: ims-db
+    env_file:
+      - .env.production
     ports:
       - "3307:3306"
     volumes:
