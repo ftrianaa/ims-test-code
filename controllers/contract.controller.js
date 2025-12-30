@@ -31,5 +31,5 @@ export async function addContract(body) {
     }
 
     const id = await postContract(payload);
-    return { success: true, id };
+    return { success: true, id: id.id };
 }
